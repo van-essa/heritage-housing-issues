@@ -1,3 +1,54 @@
+# Heritage Housing Issues
+
+![](README_docs/image from the dashboad.png)
+
+## Click [here](link to the dashboard) to live site.  
+
+---
+
+In this project, I've built a Data App with a Machine Learning User Interface (UI) combining: (1) Python packages for Machine Learning, Data Analysis and Data Visualization; and (2) Streamlit for fast Machine Learning prototyping. This project was created for my last milestone Project at Code Institute to showcase my knowledge to perform critical data analysis to generate valuable insights and deliver data-driven recommendations.
+
+The project immerses you into an environment that fully reflects professional business requirements. It achieves this by encouraging you to reflect on the "whys" and the "hows" of a Machine Learning system that delivers tangible value to your organization. The UI and the data analysis are conducted in a way that aligns with the business requirements.
+
+---
+# Table of Contents
+<details>
+<summary>Table of Contents</summary>
+
+* [Dataset Content(#dataset-content)
+* [Business Requirements](#business-requirements)
+* [Hypothesis and how to validate?](#hypothesis-and-how-to-validate?)
+    * [Hypothesis One](#hypothesis-one)
+    * [Hypothesis Two](#hypothesis-two)
+    * [Hypothesis Two](#hypothesis-three)
+* [Rationale to map the business requirements to the Data Visualizations and ML tasks](#rationale-to-map-the-business-requirements-to-the-data-visualizations-and-ml-tasks) 
+    * [Business Requirement 1: Data Visualization and Correlation Study](#business-requirement-1:-data-visualization-and-correlation-study)
+    * [Business Requirement 2: Classification, Regression, Cluster, Data Analysis](#business-requirement-2:-classification,-regression,-cluster,-data-analysis)
+* [ML Business Case](#ml-business-case)
+* [Dashboard Design](#dashboard-design)
+    * [Pge 1](#page-1)
+    * [Pge 2](#page-2) 
+    * [Pge 3](#page-3)
+    * [Pge 4](#page-4)
+    * [Pge 5](#page-5)
+    * [Pge 6](#page-6)
+    * [Pge 7](#page-7)
+* [Unfixed Bugs](#unfixed-bugs)
+* [Deployment](#deployment) 
+    * [Using Github & Gitpod](#using-github-&-gitpod)
+    * [Forking the GitHub Repository](#forking-the-gitHub-repository) 
+    * [Making a Local Clone](#making-a-local-clone) 
+    * [Deployment To Heroku](#deployment-to-heroku) 
+* [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries) 
+* [Credits](#credits)
+    * [Online resources](#online-resources)
+    * [Tutorials and inspiration](#tutorials-and-inspiration) 
+    * [People](#people)  
+</details>
+<hr>
+
+---
+
 ## Dataset Content
 * The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/housing-prices-data). We created then a fictitious user story where predictive analytics can be applied in a real project in the workplace. 
 * The dataset has almost 1.5 thousand rows and represents housing records from Ames, Iowa; indicating house profile (Floor Area, Basement, Garage, Kitchen, Lot, Porch, Wood Deck, Year Built) and its respective sale price for houses built between 1872 and 2010.
@@ -30,7 +81,7 @@
 |SalePrice|Sale Price|34900 - 755000|
 
 
-
+---
 
 
 ## Business Requirements
@@ -41,30 +92,142 @@ Although your friend has an excellent understanding of property prices in her ow
 * 1 - The client is interested in discovering how the house attributes correlate with the sale price. Therefore, the client expects data visualizations of the correlated variables against the sale price to show that.
 * 2 - The client is interested to predict the house sales price from her 4 inherited houses, and any other house in Ames, Iowa.
 
+---
 
 ## Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision to validate it (them) 
+* List here your project hypothesis(es) and how you envision to validate it (them)
+### Hypothesis One
+### Hypothesis Two
+### Hypothesis Three
 
+
+---
 
 ## Rationale to map the business requirements to the Data Visualizations and ML tasks
-* List your business requirements and a rationale to map them to the Data Visualizations and ML tasks
+* ### Business Requirement 1: Data Visualization and Correlation Study
+    - As a client, I want to inspect the data related to the house records to discover how the house attributes correlate with the sale price.
+    - As a client, I want to conduct a correlation study(Pearson and Spearman) to understand better how the variables are correlated to Sale Price so that I can discover how the house attributes correlate with the sale price.
+    - As a client, I want to plot the main variables against the Sale Price to Visualize insights, so I can discover how the house attributes correlate with the Sale Price.
+
+* ### Business Requirement 2: Classification, Regression, Cluster, Data Analysis
+    - As a client, I want to predict the Sale Price for a given house. We want to build an ML Model so the client can predict the house Sales Price from her four inherited dwellings and any other home in Ames, Iowa. 
+    - As a client, want to build a regression model or change the ML task to classification depending on the regressor performance.
+
+---
 
 
 ## ML Business Case
 * In the previous bullet, you potentially visualized a ML task to answer a business requirement. You should frame the business case using the method we covered in the course 
 
+---
+
 
 ## Dashboard Design
 * List all dashboard pages and its content, either block of information or widgets, like: buttons, checkbox, image, or any other item that your dashboard library supports.
 * Eventually, during the project development, you may revisit your dashboard plan to update a give feature (for example, in the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type)
+### Page 1 
+### Quick project summary
+	* Project Terms & Jargon
+	* Describe Project Dataset
+	* State Business Requirements
 
+### Page 2
+### Customer Base Churn Study
+* Before the analysis, we knew we wanted this page to answer business requirement 1, but we couldn't know in advance which plots would need to be displayed.
+* After data analysis, we agreed with stakeholders that the page will: 
+	* State business requirement 1
+	* Checkbox: data inspection on house attributes (display the number of rows and columns in the data, and display the first ten rows of the data)
+	* Display the most correlated variables to Sale Price and the conclusions
+	* Checkbox: Individual plots showing the Sale Price levels for each correlated variable 
+	* Checkbox: Parallel plot using Sale Price and correlated variables 
 
+### Page 3
+### Prospect Churnometer
+* State business requirement 2
+* Set of widgets inputs, which relates to the prospect profile. Each set of inputs is related to a given ML task to predict prospect Sale Price, and Cluster.
+* "Run predictive analysis" button that serves the prospect data to our ML pipelines, and predicts if the prospect will increase Sale Price or not, if so, when. It also shows to which cluster the prospect belongs and the cluster's profile. For the Sale Price predictions, the page will inform the associated probability for Sale Price level.
+
+### Page 4
+### Project Hypothesis and Validation
+* Before the analysis, we knew we wanted this page to describe each project hypothesis, the conclusions, and how we validated each. After the data analysis, we can report that:
+* 1 - ???
+	* ???
+* 2 -  ???
+	* ???
+
+### Page 5
+### Predict Sale Price
+* Considerations and conclusions after the pipeline is trained
+* Present ML pipeline steps
+* Feature importance
+* Pipeline performance
+
+### Page 6
+### Predict ???
+* Considerations and conclusions after the pipeline is trained
+* Present ML pipeline steps
+* Feature importance
+* Pipeline performance
+
+### Page 7
+### Cluster Analysis
+* Considerations and conclusions after the pipeline is trained
+* Present ML pipeline steps
+* Silhouette plot ???
+* Clusters distribution across Sale Price levels
+* Relative Percentage (%) of Sale Price in each cluster
+* Most important features to define a cluster
+* Cluster Profile
+
+---
 
 ## Unfixed Bugs
 * You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
 
+---
+
 ## Deployment
-### Heroku
+
+The master branch of this repository has been used for the deployed version of this application.
+
+### Using Github & Gitpod
+
+To deploy my Data application, I had to use the [Code Institute Full Template](https://github.com/Code-Institute-Solutions/milestone-project-heritage-housing-issues).
+
+- Click the `Use This Template` button.
+- Add a repository name and brief description.
+- Click the `Create Repository from Template` to create your repository.
+- To create a Gitpod workspace you then need to click `Gitpod`, this can take a few minutes.
+- When you want to work on the project it is best to open the workspace from Gitpod (rather than Github) as this will open your previous workspace rather than creating a new one. You should pin the workspace so that it isn't deleted.
+-  Committing your work should be done often and should have clear/explanatory messages, use the following commands to make your commits:
+    - `git add .`: adds all modified files to a staging area
+    - `git commit -m "A message explaining your commit"`: commits all changes to a local repository.
+    - `git push`: pushes all your committed changes to your Github repository.
+
+### Forking the GitHub Repository
+
+By forking the GitHub Repository you will be able to make a copy of the original repository on your own GitHub account allowing you to view and/or make changes without affecting the original repository by using the following steps:
+
+1. Log in to GitHub and locate the [GitHub Repository](repo here???)
+2. At the top of the Repository (not top of page) just above the "Settings" button on the menu, locate the "Fork" button.
+3. You should now have a copy of the original repository in your GitHub account.
+
+### Making a Local Clone
+
+1. Log in to GitHub and locate the [GitHub Repository](repo here???)
+2. Under the repository name, click "Clone or download".
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+4. Open commandline interface on your computer
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type `git clone`, and then paste the URL you copied in Step 3.
+
+```
+$ git clone http..repo here???
+```
+
+7. Press Enter. Your local clone will be created.
+
+### Deployment To Heroku
 
 * The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
 * The project was deployed to Heroku using the following steps.
@@ -75,29 +238,40 @@ Although your friend has an excellent understanding of property prices in her ow
 4. Select the branch you want to deploy, then click Deploy Branch.
 5. The deployment process should happen smoothly in case all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
 
+---
+
 
 ## Main Data Analysis and Machine Learning Libraries
 * Here you should list the libraries you used in the project and provide example(s) on how you used these libraries.
 
+|Libraries Used In The Project|How I Used The Library|Link|
+|:----|:----|:----|
+|Library|blablablabla|[Name](https://github.com/Code-Institute-Solutions/milestone-project-heritage-housing-issues)|
+|Library|blablablabla|[Name](https://github.com/Code-Institute-Solutions/milestone-project-heritage-housing-issues)|
+|Library|blablablabla|[Name](https://github.com/Code-Institute-Solutions/milestone-project-heritage-housing-issues)|
+|Library|blablablabla|[Name](https://github.com/Code-Institute-Solutions/milestone-project-heritage-housing-issues)|
+|Library|blablablabla|[Name](https://github.com/Code-Institute-Solutions/milestone-project-heritage-housing-issues)|
+|Library|blablablabla|[Name](https://github.com/Code-Institute-Solutions/milestone-project-heritage-housing-issues)|
+|Library|blablablabla|[Name](https://github.com/Code-Institute-Solutions/milestone-project-heritage-housing-issues)|
+
+---
 
 ## Credits 
 
-* In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
+Throughout the process of building this website, various online sources have been used to help fix bugs & tackle problems, in addition to multiple modules to create the functionality of this website:
 
-### Content 
+### Online resources
+* The text for the Home page was taken from Wikipedia Article A
+* Instructions on how to implement form validation on the Sign Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
+* The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
 
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+### Tutorials and inspiration
 
-### Media
+* The walkthrough project 'Churnometer ' from Code Institute [videos](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+DDA101+2021_T4/courseware/bba260bd5cc14e998b0d7e9b305d50ec/c83c55ea9f6c4e11969591e1b99c6c35/).
+* 
 
-- The photos used on the home and sign up page are from This Open Source site
-- The images used for the gallery page were taken from this other open source site
+### People
 
+* 
 
-
-## Acknowledgements (optional)
-* In case you would like to thank the people that provided support through this project.
 
