@@ -262,6 +262,7 @@ Throughout the process of building this website, various online sources have bee
 
 ### Online resources
 * John Ade-Ojo's blog post on the towardsdatascience online source regarding [creating a model to predict house prices](https://towardsdatascience.com/predicting-house-prices-with-machine-learning-62d5bcd0d68f)
+* Exploratory Data Analysis of Iowa Housing Price Prediction Problem blop post from [Revathi Suriyadeepan](https://medium.com/analytics-vidhya/exploratory-data-analysis-of-iowa-housing-price-prediction-problem-3d50a016797a)
 * 
 * 
 
