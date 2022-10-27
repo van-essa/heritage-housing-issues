@@ -18,3 +18,5 @@ app.app_page("Project Hypothesis and Validation", page_4_hypothesis_and_validati
 app.app_page("ML: Predict House Value", page_5_ml_predict_body)
 
 app.run() # Run the  app
+
+# code copied from Code Institute's Churnornmeter Project with some adjustments
