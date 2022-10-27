@@ -21,3 +21,5 @@ class MultiPage:
         st.title(self.app_name)
         page = st.sidebar.radio('Menu', self.pages, format_func=lambda page: page['title'])
         page['function']() 
+
+# The code above was copied from the Churnometer Project from Code Institute
