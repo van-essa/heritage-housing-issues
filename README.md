@@ -95,21 +95,37 @@ Although your friend has an excellent understanding of property prices in her ow
 ---
 
 ## Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision to validate it (them)
 ### Hypothesis One
+Suspect houses with larger square footing may have had a higher sales price.
+* A Correlation study can help in this investigation.
 ### Hypothesis Two
+Suspect that between houses with similar `square footing`, those with a more recent `Year Built` date may have had a higher `sales price`.
+* A Correlation study can help in this investigation.
 ### Hypothesis Three
+Suspect that between houses with similar `square footing` and `year built` date, those with a more recent `Remodel` date may have had a higher `sales price`.
+* A Correlation study can help in this investigation.
+### Hypothesis Four
+Suspect that between houses with similar `square footing`,  those with higher `quality` and `condition` scores may have had a higher `sales price`.
+* A Correlation study can help in this investigation.
 
 
 ---
 
 ## Rationale to map the business requirements to the Data Visualizations and ML tasks
 * ### Business Requirement 1: Data Visualization and Correlation Study
+    - We will inspect the data related to the houses.
+    - We will conduct a correlation study (Pearson and Spearman) to understand better how the variables are correlated to Sale Price.
+    - We will plot the main variables against Sale Price to visualize insights.
+
     - As a client, I want to inspect the data related to the house records to discover how the house attributes correlate with the sale price.
     - As a client, I want to conduct a correlation study(Pearson and Spearman) to understand better how the variables are correlated to Sale Price so that I can discover how the house attributes correlate with the sale price.
     - As a client, I want to plot the main variables against the Sale Price to Visualize insights, so I can discover how the house attributes correlate with the Sale Price.
 
 * ### Business Requirement 2: Classification, Regression, Cluster, Data Analysis
+    - We want to predict the value of a house. We want to build a regression model to predict the dependent variable.
+    - We want to make plots to visualize the train and test sets predictions vs the actual.
+    - We want to run regression evaluation to demonstrate the R2 Score and Mean Absolute Error.
+    
     - As a client, I want to predict the Sale Price for a given house. We want to build an ML Model so the client can predict the house Sales Price from her four inherited dwellings and any other home in Ames, Iowa. 
     - As a client, want to build a regression model or change the ML task to classification depending on the regressor performance.
 
