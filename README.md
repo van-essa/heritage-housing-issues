@@ -1,8 +1,8 @@
 # Heritage Housing Issues
 
-![](README_docs/image from the dashboad.png)
+![](media/dashboard.png)
 
-## Click [here](link to the dashboard) to live site.  
+## Click [here](https://heritage-houses.herokuapp.com/) to live site.  
 
 ---
 
@@ -292,6 +292,8 @@ Throughout the process of building this website, various online sources have bee
 
 ### People
 
-* 
+* My partner for all his support throughout this time.
+* Niel, developer and tutor lead on PP5 Predictive Analytics slack channel for helping me with all my questions for my project.
+* Samuel Dainton, student at Code Institute, for his support and help on Slack for my questions during my studies and PP5.
 
 
