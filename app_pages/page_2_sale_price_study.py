@@ -18,8 +18,9 @@ def page_2_sale_price_study_body():
 
     st.write("### House Value Estimator")
     st.info(
+        f"#### Business Requirement 1\n"
         f"* The client is interested in understanding the patterns from the house sales data set, "
-        f"so that the client can learn the most relevant variables correlated to SalePrice."
+        f"so that the client can learn the most relevant variables correlated to **`SalePrice`**."
     )
 
     # inspect data
@@ -36,38 +37,38 @@ def page_2_sale_price_study_body():
     # Correlation Study Summary
     st.write(
         f"* A correlation study was conducted in the notebook to better understand how "
-        f"the variables are correlated to SalePrice. \n"
+        f"the variables are correlated to  **`SalePrice`**. \n"
         f"* Additional correlation studies were conducted to grasp the relation between "
         f"the quality of a house and the year it was built or remodeled. \n"
         f"* Also, a correlation study was conducted to display houses of a similar size "
         f"across different levels of overall quality against sale price. \n"
-        f"Some of the most correlated variables to Sale Price are: **{vars_to_study}**"
+        f"Some of the most correlated variables to **`SalePrice`** are: **{vars_to_study}**"
     )
 
     # Text based on "02 - Sale Price Study" Notebook - "Conclusions and Next steps" section
     st.info(
         f"The correlation indications and plots in the noptebook are below. "
         f"It is indicated that: \n"
-        f"* The sale price of a house is higher for larger houses (Ground Living Area). \n"
-        f"* The sale price of a house is generally higher for homes of higher overall quality  "
+        f"* The sale price of a house is higher for larger houses (`Ground Living Area`). \n"
+        f"* The sale price of a house is generally higher for homes of higher overall quality \n"
         f"* The sale price of a house is sometimes higher if it was built recently. "
-        f"This occurs due to the newer the house construction (Year Built or Remodel), "
-        f"the higher generally in quality houses(Overall Quality). \n"
+        f"This occurs due to the newer the house construction (`Year Built` or `Remodel`), "
+        f"the higher generally in quality houses(`Overall Quality`). \n"
     )
 
     # Individual plots per variable
-    if st.checkbox("Sale Price correlation per Variable"):
+    if st.checkbox("Sale Price Correlation Per Variable"):
         df_eda = df.filter(vars_to_study + ['SalePrice'])
         target_var = 'SalePrice'
         regr_level_per_variable(df_eda, target_var)
 
-    if st.checkbox("Overall Quality correlation against Year Built and Remodel"):
+    if st.checkbox("Overall Quality Correlation Against Year Built And Remodel"):
         quality_to_study = ['YearBuilt', 'YearRemodAdd']
         df_eda = df.filter(quality_to_study + ['OverallQual'])
         target_var = 'OverallQual'
         regr_level_per_variable(df_eda, target_var)
 
-    if st.checkbox("Houses of Similar Area across Quality against Sale Price"):
+    if st.checkbox("Houses Of Similar Area Across Quality Against Sale Price"):
         fig, axes = plt.subplots(figsize=(8, 5))
         fig = sns.lmplot(data=df, x="GrLivArea", y="SalePrice", ci=None, hue='OverallQual')
         plt.title(f"Houses of Similar Area across Quality", fontsize=20,y=1.05)
@@ -86,4 +87,5 @@ def plot_numerical(df, col, target_var):
     plt.title(f"{col}", fontsize=20,y=1.05)
     st.pyplot(fig)
 
-# The code above was copied from the Churnometer Project from Code Institute with some adjustments
+# The code above was copied from the Churnometer Project from Code Institute 
+# with some adjustments
