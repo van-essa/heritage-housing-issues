@@ -133,7 +133,15 @@ Suspect that between houses with similar `square footing`,  those with higher `q
 
 
 ## ML Business Case
-* In the previous bullet, you potentially visualized a ML task to answer a business requirement. You should frame the business case using the method we covered in the course 
+### Predict Sale Price
+#### Regression Model 
+* We want an ML model to predict the sale price of a house. A target variable is a serial number. We consider a **regression model**, which is supervised and uni-dimensional.
+* Our ideal outcome is to provide our client with reliable insight into what sale price she should expect for her inherited houses.
+* The model success metrics are
+  - At least 0.7 for R2 score, on train and test set
+* The ML model is considered a failure if:
+   - After 12 months of usage, the model's predictions are 50% off more than 30% of the time. Say a prediction is >50% off if predicted ten months and the actual value was two months.
+* The output should be a constant value for the **`sale price`**.
 
 ---
 
@@ -161,23 +169,23 @@ Suspect that between houses with similar `square footing`,  those with higher `q
 ### Prospect Churnometer
 * State business requirement 2
 * Set of widgets inputs, which relates to the prospect profile. Each set of inputs is related to a given ML task to predict prospect Sale Price, and Cluster.
-* "Run predictive analysis" button that serves the prospect data to our ML pipelines, and predicts if the prospect will increase Sale Price or not, if so, when. It also shows to which cluster the prospect belongs and the cluster's profile. For the Sale Price predictions, the page will inform the associated probability for Sale Price level.
+* Run predictive analysis" button that serves the prospect data to our ML pipelines, and predicts if the prospect will increase Sale Price or not, if so, when. It also shows to which cluster the prospect belongs and the cluster's profile. For the Sale Price predictions, the page will inform the associated probability for Sale Price level.
 
 ### Page 4
 ### Project Hypothesis and Validation
 * Before the analysis, we knew we wanted this page to describe each project hypothesis, the conclusions, and how we validated each. After the data analysis, we can report that:
 
-**1.** We suspect houses with vast `square footing` may have had a higher `sales price`: **Correct**. \n
-- The correlation study on the **House Sale Price Study** supports that; there is a strong correlation between the two. \n
+**1.** We suspect houses with vast `square footing` may have had a higher `sales price`: **Correct**.
+- The correlation study on the **House Sale Price Study** supports that; there is a strong correlation between the two.
 
-**2.** We suspect that between houses with similar `square footing`, those with a more recent `Year Built` date may have had a higher `sales price`: **Correct**.\n 
+**2.** We suspect that between houses with similar `square footing`, those with a more recent `Year Built` date may have had a higher `sales price`: **Correct**.
 - The correlation study on the **House Sale Price Study** supports that; 
- there is a moderate correlation between the two. Also noteworthy: houses with a more recent `Year Built` date are usually higher in `Overall Quality` which has stronger correlation to `Sale Price`.\n\n"
+ there is a moderate correlation between the two. Also noteworthy: houses with a more recent `Year Built` date are usually higher in `Overall Quality` which has stronger correlation to `Sale Price`.
 
-**3.** We suspect that between houses with similar `square footing` and `year built` to date, those with a more recent `Remodel` date may have had a higher `sale price`: **Correct**.\n"
- - The correlation study on the **House Sale Price Study** supports that; there is a weak to moderate correlation between the two. Also noteworthy: there is a relationship between houses with a more recent `Remodel` date being higher in `Overall Quality`\n
+**3.** We suspect that between houses with similar `square footing` and `year built` to date, those with a more recent `Remodel` date may have had a higher `sale price`: **Correct**.
+ - The correlation study on the **House Sale Price Study** supports that; there is a weak to moderate correlation between the two. Also noteworthy: there is a relationship between houses with a more recent `Remodel` date being higher in `Overall Quality`.
 
-**4.** We suspect that between houses with similar `square footing`, those with higher `quality and condition` scores may have had a higher `sales price`: **Correct**.\n
+**4.** We suspect that between houses with similar `square footing`, those with higher `quality and condition` scores may have had a higher `sales price`: **Correct**.
  - The correlation study on the **House Sale Price Study** supports that; there is a strong correlation between the two variables.
 
 ### Page 5
@@ -222,7 +230,7 @@ By forking the GitHub Repository you will be able to make a copy of the original
 
 ### Making a Local Clone
 
-1. Log in to GitHub and locate the [GitHub Repository](repo here???)
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Code-Institute-Solutions/milestone-project-heritage-housing-issues)
 2. Under the repository name, click "Clone or download".
 3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
 4. Open commandline interface on your computer
@@ -230,7 +238,7 @@ By forking the GitHub Repository you will be able to make a copy of the original
 6. Type `git clone`, and then paste the URL you copied in Step 3.
 
 ```
-$ git clone http..repo here???
+$ git clone https://github.com/Code-Institute-Solutions/milestone-project-heritage-housing-issues
 ```
 
 7. Press Enter. Your local clone will be created.
