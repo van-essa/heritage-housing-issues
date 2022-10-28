@@ -166,10 +166,19 @@ Suspect that between houses with similar `square footing`,  those with higher `q
 ### Page 4
 ### Project Hypothesis and Validation
 * Before the analysis, we knew we wanted this page to describe each project hypothesis, the conclusions, and how we validated each. After the data analysis, we can report that:
-* 1 - ???
-	* ???
-* 2 -  ???
-	* ???
+
+**1.** We suspect houses with vast `square footing` may have had a higher `sales price`: **Correct**. \n
+- The correlation study on the **House Sale Price Study** supports that; there is a strong correlation between the two. \n
+
+**2.** We suspect that between houses with similar `square footing`, those with a more recent `Year Built` date may have had a higher `sales price`: **Correct**.\n 
+- The correlation study on the **House Sale Price Study** supports that; 
+ there is a moderate correlation between the two. Also noteworthy: houses with a more recent `Year Built` date are usually higher in `Overall Quality` which has stronger correlation to `Sale Price`.\n\n"
+
+**3.** We suspect that between houses with similar `square footing` and `year built` to date, those with a more recent `Remodel` date may have had a higher `sale price`: **Correct**.\n"
+ - The correlation study on the **House Sale Price Study** supports that; there is a weak to moderate correlation between the two. Also noteworthy: there is a relationship between houses with a more recent `Remodel` date being higher in `Overall Quality`\n
+
+**4.** We suspect that between houses with similar `square footing`, those with higher `quality and condition` scores may have had a higher `sales price`: **Correct**.\n
+ - The correlation study on the **House Sale Price Study** supports that; there is a strong correlation between the two variables.
 
 ### Page 5
 ### Predict Sale Price
@@ -177,23 +186,6 @@ Suspect that between houses with similar `square footing`,  those with higher `q
 * Present ML pipeline steps
 * Feature importance
 * Pipeline performance
-
-### Page 6
-### Predict ???
-* Considerations and conclusions after the pipeline is trained
-* Present ML pipeline steps
-* Feature importance
-* Pipeline performance
-
-### Page 7
-### Cluster Analysis
-* Considerations and conclusions after the pipeline is trained
-* Present ML pipeline steps
-* Silhouette plot ???
-* Clusters distribution across Sale Price levels
-* Relative Percentage (%) of Sale Price in each cluster
-* Most important features to define a cluster
-* Cluster Profile
 
 ---
 
@@ -258,17 +250,16 @@ $ git clone http..repo here???
 
 
 ## Main Data Analysis and Machine Learning Libraries
-* Here you should list the libraries you used in the project and provide example(s) on how you used these libraries.
 
 |Libraries Used In The Project|How I Used The Library|Link|
 |:----|:----|:----|
-|Library|blablablabla|[Name](https://github.com/Code-Institute-Solutions/milestone-project-heritage-housing-issues)|
-|Library|blablablabla|[Name](https://github.com/Code-Institute-Solutions/milestone-project-heritage-housing-issues)|
-|Library|blablablabla|[Name](https://github.com/Code-Institute-Solutions/milestone-project-heritage-housing-issues)|
-|Library|blablablabla|[Name](https://github.com/Code-Institute-Solutions/milestone-project-heritage-housing-issues)|
-|Library|blablablabla|[Name](https://github.com/Code-Institute-Solutions/milestone-project-heritage-housing-issues)|
-|Library|blablablabla|[Name](https://github.com/Code-Institute-Solutions/milestone-project-heritage-housing-issues)|
-|Library|blablablabla|[Name](https://github.com/Code-Institute-Solutions/milestone-project-heritage-housing-issues)|
+|Numpy|Used to process arrays that store values and aka data|[Link](https://numpy.org/)|
+|Pandas|Used for data analysis, data exploration, data manipulation,and data visualization|[Link](https://pandas.pydata.org/)|
+|Matplotlib|Used for graphs and plots to visualize the data|[Link](https://matplotlib.org/)|
+|Seaborn|Used to visualize the data in the Streamlit app with graphs and plots|[Link](https://seaborn.pydata.org/)|
+|ML: feature-engine|Used for engineering the data for the pipeline|[Link](https://feature-engine.readthedocs.io/en/latest/)|
+|ML: Scikit-learn|Used to creat the pipeline and apply algorithms, and feature engineering steps|[Link](https://scikit-learn.org/stable/)|
+|Streamlit|Used for creating the app to visualize the project's study|[Link](https://streamlit.io/)|
 
 ---
 
@@ -280,13 +271,16 @@ Throughout the process of building this website, various online sources have bee
 * John Ade-Ojo's blog post on the towardsdatascience online source regarding [creating a model to predict house prices](https://towardsdatascience.com/predicting-house-prices-with-machine-learning-62d5bcd0d68f)
 * Exploratory Data Analysis of Iowa Housing Price Prediction Problem blop post from [Revathi Suriyadeepan](https://medium.com/analytics-vidhya/exploratory-data-analysis-of-iowa-housing-price-prediction-problem-3d50a016797a)
 * Categorical encoding using Label-Encoding and One-Hot-Encoder from [Dinesh Yadav](https://towardsdatascience.com/categorical-encoding-using-label-encoding-and-one-hot-encoder-911ef77fb5bd)
-* 
+* A Thorough Dive into the Ames Iowa Housing Dataset from Jesse Villines post on [Medium](https://medium.com/mlearning-ai/a-thorough-dive-into-the-ames-iowa-housing-dataset-part-4-of-4-e127321885da)
+
 
 ### Tutorials and inspiration
 
 * The walkthrough project 'Churnometer ' from Code Institute [videos](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+DDA101+2021_T4/courseware/bba260bd5cc14e998b0d7e9b305d50ec/c83c55ea9f6c4e11969591e1b99c6c35/).
 * How to predict House Prices in Ames, Iowa | Kaggle Competition in Data Science & Machine Learning [YouTube Video](https://www.youtube.com/watch?v=VSeGseoJsNA&ab_channel=AlexanderHess-Pythonista) from Alexander Hess, PhD Student atWHU - Otto Beisheim School of Management, Vallendar, Germany 
-* 
+* Using Streamlit to Visualize Data from the DataLakeHouse [YouTube Channel](https://www.youtube.com/watch?v=2Re_0qUGsAk&ab_channel=AICG)
+* Streamlit app to predict Housing Prices in Ames, Iowa from Adhol [YouTube Video](https://www.youtube.com/watch?v=O6EiQ8UO0dk&ab_channel=AdhokshajaPradeep)
+
 
 ### People
 
