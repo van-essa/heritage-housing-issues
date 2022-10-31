@@ -34,7 +34,7 @@ The project immerses you into an environment that fully reflects professional bu
     * [Pge 5](#page-5)
     * [Pge 6](#page-6)
     * [Pge 7](#page-7)
-* [Unfixed Bugs](#unfixed-bugs)
+* [Bugs](#bugs)
 * [Deployment](#deployment) 
     * [Using Github & Gitpod](#using-github-&-gitpod)
     * [Forking the GitHub Repository](#forking-the-gitHub-repository) 
@@ -212,8 +212,63 @@ Suspect that between houses with similar `square footing`,  those with higher `q
 
 ---
 
-## Unfixed Bugs
-* You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
+## Bugs
+### **All estimators failed to fit**
+
+When I worked on the Predict Sale Notebook and when I ran the GridSearch CV - Binary Classifier, namely:
+
+ `from sklearn.metrics import make_scorer, recall_score
+ search = HyperparameterOptimizationSearch(models=models_quick_search, params=params_quick_search)
+ search.fit(X_train, y_train,
+           scoring =  make_scorer(recall_score, pos_label=1),
+           n_jobs=-1, cv=5)`
+
+ and I got this error:
+
+ `**NotFittedError: All estimators failed to fit**`
+
+ The issue was that I blindly followed the Walkthrough 2 process and added two different Pipelines, one for data cleaning and one for Modeling. Instead, I should have feated everything in one Pipeline as I didn't need to handle target imbalance.
+
+
+ ### **Grid Search CV**
+ 
+ When I worked on the **Modeling, and Evaluation Notebook Predict Sale Price**, I ran the *Cleaning and Feature Engineer* function, but it didn't seem to clean the data. I was running the **Grid Search CV - Sklearn**, and I got this error:
+
+ `ValueError: Classification metrics can't handle a mix of multiclass and continuous targets`
+
+ and 
+
+ `warnings.warn(
+/workspace/.pip-modules/lib/python3.8/site-packages/sklearn/model_selection/_search.py:922: UserWarning: One or more of the test scores are non-finite: [nan]
+ warnings.warn(`
+
+ And when I checked the results, I got NaN values.
+
+ ![Nan](media/NaN.png)
+
+ ![Check Mising Data](media/Checkmissing.png)
+
+ ![GridSearch](media/GridSearch.png)
+
+
+ The reason of this issue was that I added 
+
+ `search.fit(X_train, y_train,
+           scoring =  make_scorer(recall_score, pos_label=1),
+           n_jobs=-1, cv=5)`
+
+Instead of
+
+`search.fit(X_train, y_train, scoring = 'r2', n_jobs=-1, cv=5)`
+
+### **Assess Feature Importance**
+When I worked on the **Modeling and Evaluation Notebook - Predict Sale**on the House Price Dataset, I ran the *Assess feature importance*, and I got the 
+
+`AttributeError: 'numpy.ndarray' object has no attribute 'columns' error`
+
+ ![Assess Feature Importance](media/asses.png)
+
+This issue was because I counted wrong my `data_cleaning_feat_eng_steps` value. When I added the correct number (8), the error didn't appear again. 
 
 ---
 
