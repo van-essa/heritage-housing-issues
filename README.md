@@ -384,15 +384,23 @@ In the Sale Price Study (Notebook two), we noticed that some outliers had other 
 Throughout the process of building this website, various online sources have been used to help fix bugs & tackle problems, in addition to multiple modules to create the functionality of this website:
 
 ### Online resources
+* Code Institute's learning material on [Predictive Analytics](https://codeinstitute.net/se/)
+* [Kaggle](https://www.kaggle.com/datasets/codeinstitute/housing-prices-data) provided the dataset used in this project 
 * John Ade-Ojo's blog post on the towardsdatascience online source regarding [creating a model to predict house prices](https://towardsdatascience.com/predicting-house-prices-with-machine-learning-62d5bcd0d68f)
 * Exploratory Data Analysis of Iowa Housing Price Prediction Problem blop post from [Revathi Suriyadeepan](https://medium.com/analytics-vidhya/exploratory-data-analysis-of-iowa-housing-price-prediction-problem-3d50a016797a)
 * Categorical encoding using Label-Encoding and One-Hot-Encoder from [Dinesh Yadav](https://towardsdatascience.com/categorical-encoding-using-label-encoding-and-one-hot-encoder-911ef77fb5bd)
 * A Thorough Dive into the Ames Iowa Housing Dataset from Jesse Villines post on [Medium](https://medium.com/mlearning-ai/a-thorough-dive-into-the-ames-iowa-housing-dataset-part-4-of-4-e127321885da)
+* Handling Missing Values with Iowa House Prices on Medium from [AMOL MODI](https://www.kaggle.com/code/amodi8/handling-missing-values-with-iowa-house-prices/notebook)
+* Feature engineering - handling nan values from Medium on [Questions & Answers](https://www.kaggle.com/questions-and-answers/215252) section
+* Feature Transformers: Hidden Gems from Jan Krepl on [Towards Data Science](https://towardsdatascience.com/feature-transformers-hidden-gems-917bc1237f90)
+* Predicting House Prices with Linear Regression | Machine Learning from Scratch on 
+Towards Data Science by [Venelin Valkov](https://towardsdatascience.com/predicting-house-prices-with-linear-regression-machine-learning-from-scratch-part-ii-47a0238aeac1)
+* Housing Price Prediction (Linear Regression)on [Kaggle](https://www.kaggle.com/code/ashydv/housing-price-prediction-linear-regression)
 
 
 ### Tutorials and inspiration
 
-* The walkthrough project 'Churnometer ' from Code Institute [videos](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+DDA101+2021_T4/courseware/bba260bd5cc14e998b0d7e9b305d50ec/c83c55ea9f6c4e11969591e1b99c6c35/).
+* The walkthrough project 'Churnometer ' from Code Institute [videos](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+DDA101+2021_T4/courseware/bba260bd5cc14e998b0d7e9b305d50ec/c83c55ea9f6c4e11969591e1b99c6c35/)
 * How to predict House Prices in Ames, Iowa | Kaggle Competition in Data Science & Machine Learning [YouTube Video](https://www.youtube.com/watch?v=VSeGseoJsNA&ab_channel=AlexanderHess-Pythonista) from Alexander Hess, PhD Student atWHU - Otto Beisheim School of Management, Vallendar, Germany 
 * Using Streamlit to Visualize Data from the DataLakeHouse [YouTube Channel](https://www.youtube.com/watch?v=2Re_0qUGsAk&ab_channel=AICG)
 * Streamlit app to predict Housing Prices in Ames, Iowa from Adhol [YouTube Video](https://www.youtube.com/watch?v=O6EiQ8UO0dk&ab_channel=AdhokshajaPradeep)
