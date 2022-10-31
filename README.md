@@ -166,9 +166,9 @@ Suspect that between houses with similar `square footing`,  those with higher `q
 * Eventually, during the project development, you may revisit your dashboard plan to update a give feature (for example, in the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type)
 ### Page 1 
 ### Quick project summary
-	* Project Terms & Jargon
-	* Describe Project Dataset
-	* State Business Requirements
+* Project Terms & Jargon
+* Describe Project Dataset
+* State Business Requirements
 
 ### Page 2
 ### Customer Base Churn Study
