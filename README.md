@@ -162,8 +162,7 @@ Suspect that between houses with similar `square footing`,  those with higher `q
 
 
 ## Dashboard Design
-* List all dashboard pages and its content, either block of information or widgets, like: buttons, checkbox, image, or any other item that your dashboard library supports.
-* Eventually, during the project development, you may revisit your dashboard plan to update a give feature (for example, in the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type)
+
 ### Page 1 
 ### Quick project summary
 * Project Terms & Jargon
@@ -171,7 +170,7 @@ Suspect that between houses with similar `square footing`,  those with higher `q
 * State Business Requirements
 
 ### Page 2
-### Customer Base Churn Study
+### Sale Price Study
 * Before the analysis, we knew we wanted this page to answer business requirement 1, but we couldn't know in advance which plots would need to be displayed.
 * After data analysis, we agreed with stakeholders that the page will: 
 	* State business requirement 1
@@ -181,7 +180,7 @@ Suspect that between houses with similar `square footing`,  those with higher `q
 	* Checkbox: Parallel plot using Sale Price and correlated variables 
 
 ### Page 3
-### Prospect Churnometer
+### House Price Estimator
 * State business requirement 2
 * Set of widgets inputs, which relates to the prospect profile. Each set of inputs is related to a given ML task to predict prospect Sale Price, and Cluster.
 * Run predictive analysis" button that serves the prospect data to our ML pipelines, and predicts if the prospect will increase Sale Price or not, if so, when. It also shows to which cluster the prospect belongs and the cluster's profile. For the Sale Price predictions, the page will inform the associated probability for Sale Price level.
