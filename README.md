@@ -15,7 +15,8 @@ The project immerses you into an environment that fully reflects professional bu
 <details>
 <summary>Table of Contents</summary>
 
-* [Dataset Content(#dataset-content)
+* [Dataset Content](#dataset-content)
+* [User Stories](#user-stories)
 * [Business Requirements](#business-requirements)
 * [Hypothesis and how to validate?](#hypothesis-and-how-to-validate?)
     * [Hypothesis One](#hypothesis-one)
@@ -80,6 +81,20 @@ The project immerses you into an environment that fully reflects professional bu
 |YearRemodAdd|Remodel date (same as construction date if no remodeling or additions)|1950 - 2010|
 |SalePrice|Sale Price|34900 - 755000|
 
+---
+
+## User Stories
+
+### User Stories that have been satisfied by creation of particular apps in this project:
+
+| id  |  Content | How was it satisfied | User
+| ------ | ------ | ------ | ------ |
+|  [#1](https://github.com/van-essa/heritage-housing-issues/issues/1) |As a user, I want to understand the components of the sale price rise of the housing market in Iowa. | Dashboad | Client |
+|  [#2](https://github.com/van-essa/heritage-housing-issues/issues/2) | Get an stimate value of heritage houses. | Dashboad | Client |
+|  [#3](https://github.com/van-essa/heritage-housing-issues/issues/3) | As a user, I want to get all the information requested on a user-friendly dashboard so I can explore and understand the data easily. | Dashboad | Client |
+|  [#4](https://github.com/van-essa/heritage-housing-issues/issues/4) | As a user, I want to visualise the cases used for data preparation and ML pipelines so that an understanding of their usage is well communicated. | Dashboad | Data Scientist |
+
+![UserStories](media/agile.png)
 
 ---
 
