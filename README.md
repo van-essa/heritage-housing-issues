@@ -245,7 +245,7 @@ $ git clone https://github.com/Code-Institute-Solutions/milestone-project-herita
 
 ### Deployment To Heroku
 
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
+* The App live link is: https://heritage-houses.herokuapp.com/ 
 * The project was deployed to Heroku using the following steps.
 
 1. Log in to Heroku and create an App
@@ -268,6 +268,44 @@ $ git clone https://github.com/Code-Institute-Solutions/milestone-project-herita
 |ML: feature-engine|Used for engineering the data for the pipeline|[Link](https://feature-engine.readthedocs.io/en/latest/)|
 |ML: Scikit-learn|Used to creat the pipeline and apply algorithms, and feature engineering steps|[Link](https://scikit-learn.org/stable/)|
 |Streamlit|Used for creating the app to visualize the project's study|[Link](https://streamlit.io/)|
+
+
+
+### **Data Cleaning**
+![DataCleaningSpreadsheet](media/DataCleaning.png)
+* #### `CategoricalVariableImputer`
+
+  * In our Data Cleaning Notebook, `GarageFinish` showed little to no correlation against the sale price in our Sale Price Study Notebook study, and there is no clarity on its indicator. Thus, a decision was made to fill the missing data with `Unf`. 
+
+  * Then, when running the PPS, we saw a moderate correlation between `GarageFinish`, `Overall Quality`, `YearBuilt` and other variables. We could predict what `GarageFinish` could be based on different variables to improve our model. We used the CategoricalVariableImputer function in our case as using the frequent category as our imputation method was easy to implement, a fast way of obtaining complete datasets and could be integrated into production (during model deployment). 
+
+  * Also, the same strategy was followed with the `BsmtFinType1`; we filled in `Unf` for any missing data. When checking the missing values, all had `TotalBsmtSF`, and we didn't need to fill in any of the missing values with `None`.
+
+* #### `ArbitraryNumberImputer`
+  * The ArbitraryNumberImputer function replaced the missing data of `2ndFlrSF`, `EnclosedPorch`, `MasVnrArea` and `WoodDeckSF` with 0 as it was the most common value for all of these variables. Looking at`EnclosedPorch`, the missing data was 90.7%, and 7.9% of the data available was 0. Thus, more than 80% of the available data was 0. Hence, we used the `ArbitraryNumerImputer` to impute the mode value for each of these columns. 
+
+  * Another option was to drop the columns since there were more than 80% missing data. Yet, in our case, the house size was one of the most significant predictors of `Sale Price`, and we wanted to investigate the PPS, namely if we would have got a better PPS by combining all the variables related to the house size once our data was cleaned. 
+
+
+* #### `MeanMedianImputer`
+  * MeanMedianImputer was used for `LotFrontage`, another variable related to the house, to attribute the NaN values with a median value. Using the ***Pandas Profile Report***, MeanMedianImputer was the chosen function due to the normal distribution we saw on our Sale Price Study Notebook. 
+
+  * `MeanMedianImputer` was also used for `BedroomAbvGr`.
+
+  * Last,  NaN values appear where a house didn't have a garage in the `GarageYrBlt`. Thus, `MeanMedianImputer` was added to this variable.
+
+### **Feature Engineering**
+![FeatureEngineeringSpreadsheet](media/featureengineering.png)
+* `1stFlrSF` and `GrLivArea` seemed to perform well to the `log_e`, `box_cox` and `yeo_johnson` methods. `log_e` for these variables was used and trimmed them off the outliers. 
+In the Sale Price Study (Notebook two), we noticed that some outliers had other vital outlier variables. For instance, some of the largest `GrLivArea` had very low `SalePrice` compared to the rest of the data, which could have been removed. Yet, removing these records from our data would've imbalanced our train and test sets since we first ran it through the cleaning pipeline. Thus `Feature Engine Windsoriser` was used, which was the transformation of statistics by limiting extreme values in the statistical data to reduce the effect of possibly spurious outliers.
+
+* For `2ndFlrSF`, `BsmtFinSF1`, `BsmtUnfSF`, `GarageArea`, `MasVnrArea`, `OpenPorchSF`, `TotalBsmtSF` and `WoodDeckSF`, `power` transformer was used as it kept the strong kurtosis that these variables carried with all their zeros whilst normalizing the rest of the data.
+
+* `EnclosedPorch` doesn't had enough data that weren't zeros to justify using the `power` transformer.
+
+* `LotArea` and `LotFrontage` contained a small number of zeros that were well adapted to `log_e` and `yeo_johnson`, so 'log_e'was used.
+
+![NumericalTransformation](media/numerical.png)
 
 ---
 
