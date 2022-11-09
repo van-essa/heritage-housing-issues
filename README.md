@@ -169,21 +169,37 @@ Suspect that between houses with similar `square footing`,  those with higher `q
 * Describe Project Dataset
 * State Business Requirements
 
+The project terms & jargon, the description of the project's dataset and the business requirements are stated on the Project Summary page. Here the user can get an overview of the project and links to the readme file and the project's dataset collected from Kaggle.
+
+![Summary](media/summary.png)
+
+
 ### Page 2
 ### Sale Price Study
 * Before the analysis, we knew we wanted this page to answer business requirement 1, but we couldn't know in advance which plots would need to be displayed.
+![Sale Price Study](media/salestudy.png)
+
 * After data analysis, we agreed with stakeholders that the page will: 
 	* State business requirement 1
 	* Checkbox: data inspection on house attributes (display the number of rows and columns in the data, and display the first ten rows of the data)
+  ![Sale Price Study](media/salestudy1.png)
 	* Display the most correlated variables to Sale Price and the conclusions
+  ![Sale Price Study](media/salestudy2.png)
 	* Checkbox: Individual plots showing the Sale Price levels for each correlated variable 
-	* Checkbox: Parallel plot using Sale Price and correlated variables 
+  ![Sale Price Study](media/salestudy3.png)
+	* Checkbox: Parallel plot using Sale Price and correlated variables
+  ![Sale Price Study](media/salestudy4.png)
+
+  
 
 ### Page 3
 ### House Price Estimator
 * State business requirement 2
-* Set of widgets inputs, which relates to the prospect profile. Each set of inputs is related to a given ML task to predict prospect Sale Price, and Cluster.
-* Run predictive analysis" button that serves the prospect data to our ML pipelines, and predicts if the prospect will increase Sale Price or not, if so, when. It also shows to which cluster the prospect belongs and the cluster's profile. For the Sale Price predictions, the page will inform the associated probability for Sale Price level.
+* Set of widgets inputs, which relates to the prospect profile. Each set of inputs is related to a given ML task to predict prospect Sale Price.
+* Run predictive analysis" button that serves the prospect data to our ML pipelines, and predicts if the prospect will increase Sale Price or not, if so, when. For the Sale Price predictions, the page will inform the associated probability for Sale Price level.
+![Predict](media/predict.png)
+
+
 
 ### Page 4
 ### Project Hypothesis and Validation
@@ -202,12 +218,18 @@ Suspect that between houses with similar `square footing`,  those with higher `q
 **4.** We suspect that between houses with similar `square footing`, those with higher `quality and condition` scores may have had a higher `sales price`: **Correct**.
  - The correlation study on the **House Sale Price Study** supports that; there is a strong correlation between the two variables.
 
+![Project](media/project.png)
+
+
+
 ### Page 5
 ### Predict Sale Price
 * Considerations and conclusions after the pipeline is trained
 * Present ML pipeline steps
 * Feature importance
 * Pipeline performance
+![ML](media/ml.png)
+![ML](media/ml1.png)
 
 ---
 
